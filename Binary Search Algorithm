@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class BinarySearchAlgorithm {
+    public static void main(String[] args) {
+
+        Scanner input=new Scanner(System.in);
+        int find=input.nextInt();
+        int mid,l=0;
+        int arr[] = {10,20,30,40,50,60,70,80,90,100};
+        int r=arr.length-1;
+
+
+        while(l<=r){
+            mid=(l+r)/2;
+            if(arr[mid]==find){
+                System.out.println(mid);
+                return;
+
+            }else if(arr[mid]<find){
+                l=mid+1;
+            }else {
+                r=mid-1;
+            }
+        }
+        System.out.println("not found");
+
+    }
+}
