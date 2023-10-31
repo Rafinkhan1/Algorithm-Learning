@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class LinearSearchAlgorithm {
+
+    public static void main(String[] args) {
+
+
+        Scanner input = new Scanner(System.in);
+        int i,found=0,find;
+
+        System.out.print("Enter the number of elements = ");
+        find = input.nextInt();
+
+       int[] array = {10,20,30,40,50,60,70} ;
+
+       for(i=0;i<array.length;i++){
+
+           if(array[i] == find){
+               System.out.println("index number = "+i);
+               found++;
+               break;
+           }
+           }
+        if(found==0){
+            System.out.println("index not exist");
+       }
+    }
+}
